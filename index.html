@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Динамические карточки</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="grid">
+        <section class="panel wide">
+          <h2>Новая карточка</h2>
+          <form id="card-form" class="input-row">
+            <input
+              id="card-input"
+              class="input"
+              placeholder="Например, Изучить события"
+              maxlength="60"
+            /><button class="btn primary" type="submit">Добавить</button>
+          </form>
+          <p class="small">
+            Нажмите на карточку, чтобы выделить её. Кнопка × удаляет карточку.
+          </p>
+        </section>
+        <section class="panel wide">
+          <h2>Коллекция карточек</h2>
+          <ul id="card-list" class="card-list">
+            <li class="item-card" data-card>
+              <span class="item-title">Повторить DOM</span
+              ><button
+                class="remove-card"
+                type="button"
+                aria-label="Удалить карточку"
+              >
+              </button>
+            </li>
+          </ul>
+          <p id="card-status" class="status" aria-live="polite">
+            Карточки готовы.
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
